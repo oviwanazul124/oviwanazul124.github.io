@@ -1,0 +1,43 @@
+html {
+    background-color: #EEEEEE;
+}
+
+.center{
+    text-align: center;
+}
+
+.normalText {
+    text-align: start;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.navigationBar {
+    overflow: hidden;
+    background-color: #5B99C2;
+    border: 1px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-left: -8px;
+}
+
+.navigationBar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navigationBar a:hover {
+    background: #1A4870;
+    color: #EEEEEE;
+}
+
+.mainHeader ul {
+    list-style-type: none;
+    text-align: center;
+}
