@@ -18,7 +18,7 @@ $$\sum_{n=0}^\infty\frac{(-1)^n}{2n + 1} = \frac{\pi}{4}$$
 
 ### Including Libraries
 
-Lo primero de todo debemos importar las siguientes librerias.
+First we need to import the following libraries.
 
 ```c
 #include <stdio.h>
