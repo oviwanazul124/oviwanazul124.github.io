@@ -2,7 +2,7 @@
 title: Leibniz's Algorithm in C
 date: 2024-12-7 17:42:10 +0100
 categories: [Programming]
-tags: [c]
+tags: [c, Tutorial]
 description: Short tutorial on how to develop Leibniz's algorithm in C.
 math: true
 
