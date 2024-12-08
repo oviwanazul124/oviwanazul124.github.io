@@ -119,10 +119,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: "oviwanazul124/oviwanazul124.github.io"
+    repo_id: "R_kgDONaUApQ"
+    category: "Announcements"
+    category_id: "DIC_kwDONaUApc4ClCPu"
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
