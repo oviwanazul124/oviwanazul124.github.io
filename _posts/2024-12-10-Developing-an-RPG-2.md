@@ -1,12 +1,12 @@
 ---
 title: Developing an RPG in Godot - Movement and adding sprites
-date: 2024-12-8 12:00:10 +0100
+date: 2024-12-14 12:00:10 +0100
 categories: [Game Develop]
-tags: [Godot, Game Develop, Tutorial, Maths]
+tags: [Godot, Game Develop, Tutorial, Maths, English]
 description: This is a series of blog posts about how to develop a RPG game in godot. In this blog we are covering the movement and adding sprites.
 math: true
 image:
-  path:
+  path: assets/photos/Develop-an-RPG-2/Header.gif
   alt: A knight moving
 ---
 
@@ -59,7 +59,7 @@ The classic RPG uses the 8-movement, this type of movement enables the player to
 
 First of all, we are going to create a new folder at the root of our project, the folder will have the name "Scripts". Here we are going to save all the scripts to use in our game.
 
-![Godot-Explorer-Created-Scripts]()
+![Godot-Explorer-Created-Scripts](assets/photos/Develop-an-RPG-2/Created-Folder-Scripts.png)
 _Created Folder Scripts_
 
 After creating the folder script we are going to press left click and create a script.
@@ -125,16 +125,57 @@ func get_input():
 
 #### Setting up input commands
 
-Opening the input controller map windows, we are going to set up the different input keys,
+To open the input map we are going to need to press the following buttons, first in the upper right press **proyect**, **configuration proyect** and the **input map**.
 
-![Godot_Input_Map]()
+![Godot_Input_Map](assets/photos/Develop-an-RPG-2/Godot-Input-Map-Window.png)
 _Godot Input Map Window_
 
+After doing this you are going to write where it says **"Add new action"**, **left**, press the **add**, when pressing this you are going to see the following changes.
+
+![Godot_Input_Map_Added_Input](assets/photos/Develop-an-RPG-2/Godot-Iput-Map-Added-Input.png)
+_Godot Input Map Added Input_
+
+Next you are going to press the **plus sign**, and press the key that you want to bind to that input. After press **accept**.
+
+![Godot_Input_Map_Added_Input_Key](assets/photos/Develop-an-RPG-2/Godot-Input-Map-Added-Input-Key.png)
+_Godot Input Map Added Input Key_
+
+We are going to follow the same procces with, **right**, **up** and **down**.
 
 #### Function _physics_process(delta)
+
+Next we are going to view the **_physics_process(delta)** this function is created by the engine and is in charge of all the process related to the physics, here we call our **get_input()** function, and the **move_and_slide()** functions, this is also a function created by the engine, and tell the object to start moving.
 
 ```gdscript
   func _physics_process(delta):
     get_input()
     move_and_slide()
 ```
+
+> If you get a warning in **delta** add an underscore like this **_delta**
+{: .prompt-warning}
+
+
+## Adding the script and creating the player
+
+Next we are going to press left click in **Node2D** and press **Add Child Node**, it is going to open a windows, there search **CharacterBody2D** and add it.
+
+![Adding_CharacterBody2D](assets/photos/Develop-an-RPG-2/Adding-CharacterBody2D.gif.gif)
+_Adding Character Body2D_
+
+> If you don't have a **Node2D** in the tree, added in the same form as the characterBody2D.
+{: .prompt-warning}
+
+You are going to see a warning next to the name, you don't need to give importance to that right now. After that, do the same this time left clicking in the **CharacterBody2D**, and adding a **Sprite**.
+
+![Adding_Sprite](assets/photos/Develop-an-RPG-2/Adding-Sprite.gif)
+_Adding Sprite_
+
+Now there is only one more thing left, adding the script to the CharacterBody2D.
+
+![Adding_Script_To_CharacterBody2D](assets/photos/Develop-an-RPG-2/Adding-Script-To-CharaterBody2D.gif)
+_Adding Script To CharacterBody2D_
+
+## Github Demo
+
+Here you can access to the [repo](https://github.com/oviwanazul124/How-to-make-an-RPG/tree/main/Developing%20an%20RPG%20in%20Godot%20-%20Movement%20and%20adding%20sprites) that contains all the files of the different blogs about developing and RPG.
