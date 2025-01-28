@@ -67,5 +67,81 @@ _Heriarchy of the object_
 
 ### Explanation of every node
 
+The Node2D is the basics of every 2D node as his name indicates, will be used in all games made in 2D in this engine, now the RigidBody2D is a type of Body2D as seen above the main difference is that **Body2D** is mainly used for objects meant to move for example an enemy, an NPC or even our protagonist. In the other hand the RigidBody2D is meant for objects that are static, this type of body can move but the mainly use for, is for statics objects. There is also an **StaticBody2D**, this type of Body2D will appear in much later blogs posts.
 
-``
+### The code 
+
+Now we are going to enter in the code section, we will be using a really basic script right now to dialog. For now we will start creating the script in the **InteracteableObject** or the **Node2D**. We are going to name it: **objectController**
+
+> You can name it whatever you want, I am using this to maintain certain order with my scripts
+{: .prompt-info}
+
+Next we are going to delete the ***_process()*** and ***_start()*** function, this two function is not going to be used right now in the script. Next we are going to create the first custom functions we are going to call it ***_on_body_entered()***, this function will be in charge of detecting when the Player is interacting with the radius of interaction. The script should look like the following:
+
+```gdscript
+
+extends Node2D
+
+
+_on_body_entered():
+  pass
+
+```
+
+After creating the function we are going to define a variable named **isInside** this will be a bool, that will be in charge of checking if the player is inside the radious of interaction
+
+> Always name your variables something that is meaningful to that variable. If you call it for example **"j"** soon or later you are going to forget what even that name is about.
+{: .prompt-warning}
+
+```gdscript
+
+extends Node2D
+
+var isInside : Bool = false
+
+_on_body_entered():
+  isInside = true
+
+```
+
+If you see this time we defined the variable in a different form, normally we use **var isInside = false**, but in this case we use **var isInside *: Bool* = false**, in this case the ***: Bool*** part is used to mark that **ONLY A BOOL VALUE** can be save in that variable and cannnot be asigned other one.
+
+> This type of definitions follow the following syntax: **var *[Name of the variable]* : *[Type of variable]* *(Optional [Definition of the variable])***
+{: .prompt-info}
+
+Next we are going to create a function to check when the player has exited the radious of interaction of the object. We are going to call it ***_on_body_exited()***.
+
+```gdscript
+
+extends Node2D
+
+var isInside : Bool = false
+
+# This function check if the player is inside of the interaction radious
+_on_body_entered():
+  isInside = true
+
+# This function check if the player is outside of the interaction radious
+_on_body_exited():
+  isInside = false
+
+```
+Now we are going to use a function called ***_input()*** this is a engige function that is called every time that an input event is made. For example if a key is pressed, we are going to use this function to check if our interaction button has been pressed and the player is inside of the interaction radious of the object.
+
+```gdscript
+
+extends Node2D
+
+var isInside : Bool = false
+
+# This function check if the player is inside of the interaction radious
+_on_body_entered():
+  isInside = true
+
+# This function check if the player is outside of the interaction radious
+_on_body_exited():
+  isInside = false
+
+_
+
+```
