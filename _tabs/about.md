@@ -8,7 +8,7 @@ order: 4
 
 ---
 
-I am Javier, I have a blog about programming and developing videogames 😀
+I am Javier, I have a blog about programming and developing videogames. Since I was a child I have played video games, and during my adolescence I started to develop them, this has led me to this day.Currently my vision is to improve in areas such as multiplayer game development and to publish and develop more complex games than the ones I have prepared. 
 
 ### Languages 🐍
 

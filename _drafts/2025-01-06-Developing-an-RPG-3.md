@@ -12,6 +12,8 @@ image:
 
 ## What we refers as an object?
 
+---
+
 When I talk about an object, I refer to **everything that a player can interact**, for example in various RPG, you interact with **objects on the floor**, **people**...
 
 Then everything that is interacteable is an object, obviously an person and a object in the floor **has differents workflows**, and **object** in the floor **only exist to be taken by the player**, but the person **maybe give you a mission** or it is a **shop** where it can be bought certain items. 
@@ -20,32 +22,20 @@ Now here enters the problem if an object can do all the things I have talked and
 
 ## The type of thinking
 
-> This section is a TIP, you dont need to take this as a manual, everyone has different workflows.
-{: .prompt-warning}
+---
 
-To solve this problem, we are gonna to think in the real world, imagine you are in apartament and you are hungry, the most obvious thing that you would do it going to be to go to the kitchen and make something to eat, now in the context we are going to have two kitchens.
+When we start to develop our first scripts, it is recommended that we separate the main functions. Why is this?
 
-The **first kitchen**, have everything in a right place, every cabinet store a type of thing and not various for example, one is only for the drinks, vegetables... In this kitchen will be easier to find what you need in no matter of time and also it would be easier to others.
 
-![First-kitchen-example]()
-_Example of the first kitchen_
-
-Now, the **second kitchen**, this have everything mixed, some things and in one cabinet the other half of the ingredient are in another cabinet...
-
-![Second-kitchen-example]()
-_Example of the second kitchen_
-
-If you really wanted to make a sandwich, it would be easier to do it in the first kitchen where everything is know where is and not in the second kitchen. After this strange example aboout making sandwichs, we would return to the programming area.
-
-This example, is used to explain what it would be recommended to do when working in big development projects, if you are alone and you "understand" you form of saving things, is great but this also to solve the **hells scripts** as I call it, script with 17,000 lines of code that no one will want to debug.
-
-When developing everything will need to stay in his own box, for example in the following points we are going to talk about the UI, it will be stupid to add a function in the UI script a function that is related to the player, this the most obvious example but others like making a really long script controlling all the workflow of the UI is another. 
-
-If for example the UI is made of a calendar, a textbox and a phone. It would be recommended that every part of this UI has his own script, this because in later development maybe you need to rewrite **only** the calendars functions and not the textbot or phone but because how you made it now you has a long script with a mix of all the functions.
+It is a simple way to facilitate later the modification and understanding of this code in the future, in a simple way if in the future you have to modify a code that refers to 500 different nodes it will be much more complex to fix minimal errors than one that refers to 3 or 4 nodes. My recommendation is to always reduce the code to the minimum. Neither overthink it nor minimize it to the maximum, I know it sounds difficult but it is a skill that you get with time.
 
 ## Making our first object
 
+---
+
 ### Creating the sample object
+
+---
 
 Now, we are gonning to make an object, the **first thing** we need to do is **make a new scene**. Why this?, making a new scene will allow us later to append that scene to others scene, this will be easier than remaking the object every moment that we need.
 
@@ -54,7 +44,6 @@ _Creating the scene for the first object_
 
 >It would be recommended that in the root folder of the project you make a folder to save all the objects that you made also name the scene something obvious about what is inside, something you will remember even in months.
 {: .prompt-info}
-
 
 Now in the scene we will select the **[Node2D](https://docs.godotengine.org/en/latest/classes/class_node2d.html)** as a base, and add the following nodes as his childrens first we add an **[RigidBody2D](https://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html)** after that we add inside of the RigidBody2D an **[Sprite2D](https://docs.godotengine.org/en/latest/classes/class_sprite2d.html)** and a **[CollisionShape2D](https://docs.godotengine.org/en/latest/classes/class_collisionshape2d.html)**, then a **[Area2D](https://docs.godotengine.org/en/latest/classes/class_area2d.html)** inside of the **[Area2D](https://docs.godotengine.org/en/latest/classes/class_area2d.html)** we are going to add another **[CollisionShape2D](https://docs.godotengine.org/en/latest/classes/class_collisionshape2d.html)**
 
@@ -67,9 +56,13 @@ _Heriarchy of the object_
 
 ### Explanation of every node
 
+---
+
 The Node2D is the basics of every 2D node as his name indicates, will be used in all games made in 2D in this engine, now the RigidBody2D is a type of Body2D as seen above the main difference is that **Body2D** is mainly used for objects meant to move for example an enemy, an NPC or even our protagonist. In the other hand the RigidBody2D is meant for objects that are static, this type of body can move but the mainly use for, is for statics objects. There is also an **StaticBody2D**, this type of Body2D will appear in much later blogs posts.
 
 ### The code 
+
+---
 
 Now we are going to enter in the code section, we will be using a really basic script right now to dialog. For now we will start creating the script in the **InteracteableObject** or the **Node2D**. We are going to name it: **objectController**
 

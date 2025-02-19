@@ -1,9 +1,9 @@
 ---
-title: Developing an RPG in Godot - Installing Godot
+title: Installing Godot 4 
 date: 2024-12-8 12:00:10 +0100
 categories: [Game Develop]
 tags: [Godot, Game Develop, Tutorial, English]
-description: This is a series of blog posts about how to develop a RPG game in godot.
+description: This is a very simple tutorial on how to install Godot Enginge
 image:
   path: assets/photos/Develop-an-RPG/GodotMainPage.png
   alt: Godot Enginge Web Page
