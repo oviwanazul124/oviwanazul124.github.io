@@ -75,12 +75,13 @@ scanf("%i", &iter);
 ```
 
 
-> In case you didn't know, ‘\n’ allows the following message to appear on the next line of the terminal.
+> Si no lo sabías, ‘\n’ permite que el siguiente mensaje aparezca en una nueva linea.
 {: .prompt-info }
 
 
 ## Función de la función serie
-Next we use a while that will run until the variable **cont** is greater than the proposed number of iterations. The next thing we will do is create a variable **d** this will be in charge of the fraction of the [formula](#brieft-introduction) that we have shown at the beginning, then we define another variable called **result** , this will be in charge of adding the result obtained by the fraction (we multiply it by 4 because otherwise it would give us pi/4 not pi).
+
+A continuación usaremos un while que comprobará si la variable **cont** es mayor que el número que ha introducido el usuario. Lo sigueinte que hará será crear la variable **d**, que se encargará de la división de la [fórmula](#breve-introducción) que hemos enseñado al principio, después definimos otra variable llammada **result**, esto nos permitira añadir el resultado de la fracción obtenida (Lo múltiplicamos por 4 por que si nos daría pi/4 no pi)
 ```c
  printf("iter, error, result \n");
     while(cont < iter){
@@ -102,4 +103,4 @@ Next we use a while that will run until the variable **cont** is greater than th
 
 ## Final Code
 
-The final code can be found on my [github](https://github.com/oviwanazul124/Leibniz-s-Algorithm-in-C/blob/main/main.c) page.
+El código final puedes encontrarlo en mi página de [github](https://github.com/oviwanazul124/Leibniz-s-Algorithm-in-C/blob/main/main.c).
