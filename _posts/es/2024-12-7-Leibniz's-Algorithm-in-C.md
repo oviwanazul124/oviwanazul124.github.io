@@ -59,7 +59,7 @@ void serie();
 
 ## Función de la función introducción
 
-Esta funcion se encarga de pedir al usuario el numero de iteraciones por las que pi debe ser cálculado, despues lo guarda en una variable que hemos creado en [incluyendo todas las variables](#incluyendo-todas-las-las-variables). Después de esto verifica si el número es 0 o negativo, ya que si este es el caso pedirá al usuario reintroducir otro nnúmeo y finalmene llama a la [función series]()
+Esta funcion se encarga de pedir al usuario el numero de iteraciones por las que pi debe ser cálculado, despues lo guarda en una variable que hemos creado en [incluyendo todas las variables](#incluyendo-todas-las-las-variables). Después de esto verifica si el número es 0 o negativo, ya que si este es el caso pedirá al usuario reintroducir otro nnúmeo y finalmene llama a la [función series](#función-de-la-función-serie)
 
 
 ```c
@@ -101,6 +101,6 @@ A continuación usaremos un while que comprobará si la variable **cont** es may
 {: .prompt-info }
 
 
-## Final Code
+## Código Final
 
 El código final puedes encontrarlo en mi página de [github](https://github.com/oviwanazul124/Leibniz-s-Algorithm-in-C/blob/main/main.c).

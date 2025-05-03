@@ -4,7 +4,7 @@ date: 2025-03-5 17:42:10 +0100
 description: Short entry talking about the changes in the blog
 lang: en
 translations:
-  ja: /ja/changes-in-the-blog/
+  ja: /ja/changes-in-the-blog!/
   en: /posts/Changes-in-the-blog!/
   es: /es/changes-in-the-blog!/
 
