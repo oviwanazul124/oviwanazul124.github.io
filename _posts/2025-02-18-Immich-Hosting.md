@@ -4,6 +4,7 @@ date: 2025-02-18 12:16:53 +0100
 categories: [Tech]
 tags: [Tech, Opinion]
 description: My opinion on using immich to autohost our own photos.
+lang: en
 image:
   path: assets/photos/Immich-Opinion/Header.png
   alt: Immich Header

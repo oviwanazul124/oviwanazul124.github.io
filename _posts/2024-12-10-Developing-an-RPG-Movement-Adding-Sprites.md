@@ -5,6 +5,7 @@ categories: [Game Develop]
 tags: [Godot, Game Develop, Tutorial, Maths, English]
 description: This is a series of blog posts about how to develop a RPG game in godot. In this blog we are covering the movement and adding sprites.
 math: true
+lang: en
 image:
   path: assets/photos/Develop-an-RPG-2/Header.gif
   alt: A knight moving

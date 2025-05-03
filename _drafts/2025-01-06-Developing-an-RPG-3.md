@@ -5,6 +5,7 @@ categories: [Game Develop]
 tags: [Game Develop, Maths, English]
 description: In this third blog post we are gonna develop the first objects, learning also about a really easy method to implement new things to our game.
 math: true
+lang: en
 image:
   path:
   alt: Developing-an-RPG-3

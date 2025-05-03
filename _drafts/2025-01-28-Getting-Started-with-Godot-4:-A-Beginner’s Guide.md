@@ -5,6 +5,7 @@ categories: [Game Develop]
 tags: [Game Develop, Maths, English]
 description: 
 math: true
+lang: en
 image:
   path:
   alt: Godot4

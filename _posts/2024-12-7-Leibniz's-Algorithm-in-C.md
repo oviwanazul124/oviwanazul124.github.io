@@ -5,6 +5,11 @@ categories: [Programming]
 tags: [c, Tutorial, English]
 description: Short tutorial on how to develop Leibniz's algorithm in C.
 math: true
+lang: en
+translations:
+  ja: /ja/leibnizs-algorithm-in-c/
+  en: /posts/Leibniz's-Algorithm-in-C/
+  es: /es/leibnizs-algorithm-in-c/
 
 ---
 
