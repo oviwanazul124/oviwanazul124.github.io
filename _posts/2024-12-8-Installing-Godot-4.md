@@ -8,6 +8,10 @@ lang: en
 image:
   path: assets/photos/Develop-an-RPG/GodotMainPage.png
   alt: Godot Enginge Web Page
+translations:
+  ja: /ja/installing-godot-4/
+  en: /posts/Installing-Godot-4/
+  es: /es/installing-godot-4/
 ---
 
 ## Introduction
