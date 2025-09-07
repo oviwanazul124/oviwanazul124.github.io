@@ -1,10 +1,9 @@
 ---
 title: "Windows Server 2019 のインストール "
 date: 2025-06-09 12:00:10 +0100
-categories: [Game Develop]
-tags: [Game Develop, Maths, English]
+categories: [System Administrator]
+tags: [System Administrator, Japanese]
 description: 仮想マシンにWindows Server 2019を設定する方法に関する簡単なチュートリアル
-math: false
 lang: ja
 translations:
   ja: /ja/installing-windows-server-2019/

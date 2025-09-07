@@ -1,10 +1,9 @@
 ---
 title: "Installing Windows Server 2019 "
 date: 2025-06-09 12:00:10 +0100
-categories: [Game Develop]
-tags: [Game Develop, Maths, English]
+categories: [System Administrator]
+tags: [System Administrator, English]
 description: A short tutorial on how to set up Windows Server 2019, in a Virtual Machine
-math: false
 lang: en
 translations:
   ja: /ja/installing-windows-server-2019/
