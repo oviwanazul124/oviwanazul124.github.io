@@ -8,7 +8,7 @@ math: false
 lang: ja
 translations:
   ja: /ja/installing-windows-server-2019/
-  en: /posts/Installing-windows-server-2019/
+  en: /posts/installing-windows-server-2019/
   es: /es/installing-windows-server-2019/
 permalink: /ja/installing-windows-server-2019/
 ---
