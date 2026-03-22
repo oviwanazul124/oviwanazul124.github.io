@@ -4,5 +4,13 @@ description: Lorem Ipsum
 baseurl: ""
 # URL of the page
 url: "https://oviwanazul124.github.io"
-# Permalink, shorters the URL make it more peaseable 
-permalink: /:lang/:title/
+# Permalink, shorters the URL make it more peaseable
+defaults:
+  - scope:
+      path: "" # Apply to all files
+    values:
+      layout: "default"
+  - scope:
+      path: "_posts"
+    values:
+      permalink: /:categories/:title/
