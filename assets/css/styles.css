@@ -126,3 +126,25 @@ nav.container {
   border-radius: 3px;
   margin-right: 5px;
 }
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+#projectSearch {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#projectSearch:focus {
+  border-color: var(--accent);
+}
+
+.project-item {
+  transition: opacity 0.3s ease;
+}
