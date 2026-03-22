@@ -4,14 +4,27 @@ title: My Projects
 lang: es
 lang-ref: postsPage
 ---
+
 <h1>Project Documentation</h1>
-<ul>
-  {% for post in site.posts %}
-    {% if post.lang == 'es' %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span>— {{ post.date | date: "%b %Y" }}</span>
-      </li>
-    {% endif %}
-  {% endfor %}
+<ul class="post-list">
+  {% for post in site.posts %} {% if post.lang == page.lang %}
+  <li class="project-item">
+    <a href="{{ post.url | relative_url }}"
+      ><strong>{{ post.title }}</strong></a
+    >
+
+    <div class="project-meta">
+      <span class="category-label">
+        {% for cat in post.categories %} {% unless cat == 'en' or cat == 'es' %}
+        {{ cat }} {% endunless %} {% endfor %}
+      </span>
+
+      <span class="tags-list">
+        {% for tag in post.tags %}
+        <small class="tag">#{{ tag }}</small>
+        {% endfor %}
+      </span>
+    </div>
+  </li>
+  {% endif %} {% endfor %}
 </ul>
