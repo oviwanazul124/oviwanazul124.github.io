@@ -30,7 +30,7 @@ nav {
   align-items: center;
 }
 
-.langSwitch a {
+.lang-switch a {
   text-decoration: none;
   font-weight: bold;
   color: var(--accent);

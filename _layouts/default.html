@@ -22,27 +22,23 @@
     <header>
       <nav class="container">
         <div class="nav-links">
-          <a href="{{ '/' | append: page.lang | append: '/' | relative_url}}">
-            {{ page.lang = 'es' ? 'Inicio' : 'Home'}}
-          </a>
-          <a
-            href="{{ '/ | append: page.lang | append: '/posts/' | relative_url }}"
-          >
-            {{ page.lang == 'es' ? 'Proyectos' : 'Posts' }}
-          </a>
+          {% if page.lang == 'es' %}
+          <a href="{{ '/es/' | relative_url }}">Inicio</a>
+          <a href="{{ '/es/posts/' | relative_url }}">Proyectos</a>
+          {% else %}
+          <a href="{{ '/en/' | relative_url }}">Home</a>
+          <a href="{{ '/en/posts/' | relative_url }}">Projects</a>
+          {% endif %}
         </div>
         <div class="lang-switch">
-          <div class="lang-switch">
-            {% assign translations = site.posts | concat: site.pages | where:
-            "lang_ref", page.lang_ref %} {% for version in translations %} {% if
-            version.lang == page.lang %}
-            <span class="current-lang">{{ version.lang | upcase }}</span>
-            {% else %}
-            <a href="{{ version.url | relative_url }}"
-              >{{ version.lang | upcase }}</a
-            >
-            {% endif %} {% unless forloop.last %} | {% endunless %} {% endfor %}
-          </div>
+          {% assign versions = site.posts | concat: site.pages | where:
+          "lang_ref", page.lang_ref %} {% if versions.size > 1 %} {% for v in
+          versions %} {% if v.lang == page.lang %}
+          <strong>{{ v.lang | upcase }}</strong>
+          {% else %}
+          <a href="{{ v.url | relative_url }}">{{ v.lang | upcase }}</a>
+          {% endif %} {% unless forloop.last %} | {% endunless %} {% endfor %}
+          {% endif %}
         </div>
       </nav>
     </header>
