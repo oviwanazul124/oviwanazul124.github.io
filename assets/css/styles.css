@@ -24,16 +24,26 @@ header {
   border-bottom: 1px solid #eee;
 }
 
-nav {
+nav.container {
   display: flex;
   justify-content: space-between;
+  /* This pushes nav-links left and lang-switch right */
   align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
 }
 
-.lang-switch a {
+.nav-links a {
+  margin-right: 20px;
   text-decoration: none;
+  color: #333;
   font-weight: bold;
-  color: var(--accent);
+}
+
+.lang-switch {
+  display: flex;
+  gap: 10px;
 }
 
 .mjx-chtml {
