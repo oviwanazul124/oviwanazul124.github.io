@@ -1,0 +1,16 @@
+---
+layout: default
+title: My Projects
+lang: en
+---
+<h1>Project Documentation</h1>
+<ul>
+  {% for post in site.posts %}
+    {% if post.lang == 'en' %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span>— {{ post.date | date: "%b %Y" }}</span>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,8 @@
+title: Javier Garcia Blog
+description: Lorem Ipsum
+# Base route for the page
+baseurl: ""
+# URL of the page
+url: "https://oviwanazul124.github.io"
+# Permalink, shorters the URL make it more peaseable 
+permalink: /:lang/:title/
