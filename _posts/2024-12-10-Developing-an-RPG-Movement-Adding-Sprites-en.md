@@ -5,6 +5,7 @@ lang: en
 categories: [en, GameDev]
 tags: [GDScript, Godot, RPG]
 lang_ref: RPGMov
+thumbail: assets/photos/Develop-an-RPG-2/Header.gif
 ---
 
 ## Movement
