@@ -1,0 +1,35 @@
+{% assign locale = include.locale | default: site.locale %}
+
+{% assign posts_mismo_idioma = site.posts | where: "language", page.language %}
+
+{% for post in posts_mismo_idioma %}
+  {% if post.url == page.url %}
+    {% assign prev_index = forloop.index0 | plus: 1 %}
+    {% assign next_index = forloop.index0 | minus: 1 %}
+    
+    {% if prev_index < posts_mismo_idioma.size %}
+       {% assign prev_post = posts_mismo_idioma[prev_index] %}
+    {% endif %}
+    
+    {% if next_index >= 0 %}
+       {% assign next_post = posts_mismo_idioma[next_index] %}
+    {% endif %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if prev_post or next_post %}
+  <nav class="pagination" aria-label="Post pagination">
+    {% if prev_post %}
+      <a href="{{ prev_post.url | relative_url }}" class="pagination--pager" title="{{ prev_post.title | markdownify | strip_html | strip }}">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
+    {% endif %}
+
+    {% if next_post %}
+      <a href="{{ next_post.url | relative_url }}" class="pagination--pager" title="{{ next_post.title | markdownify | strip_html | strip }}">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+    {% endif %}
+  </nav>
+{% endif %}

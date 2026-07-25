@@ -1,0 +1,15 @@
+---
+layout: archive
+---
+
+{{ content }} {%- assign locale = page.locale | default: layout.locale |
+default: site.locale %} {%- assign entries_layout = page.entries_layout |
+default: 'list' %} {% comment %} Forzamos el idioma de la página a string y
+quitamos espacios {% endcomment %} {%- assign page_lang = page.language |
+append: "" | strip %}
+
+<div class="entries-{{ entries_layout }}">
+  {% for post in site.posts %} {%- assign post_lang = post.language | append: ""
+  | strip %} {% if post_lang == page_lang %} {% include archive-single.html
+  type=entries_layout %} {% endif %} {% endfor %}
+</div>

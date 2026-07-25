@@ -1,0 +1,21 @@
+<div class="language-selector" style="margin-top: 1.5em; font-size: 0.9em;">
+  <strong style="display: block; margin-bottom: 0.5em;">
+    {% if page.language == 'es' %}Leer en otro idioma:{% endif %}
+    {% if page.language == 'en' %}Read in another language:{% endif %}
+    {% if page.language == 'jp' %}他の言語で読む:{% endif %}
+  </strong>
+  
+  <ul style="list-style: none; padding: 0; display: flex; gap: 10px;">
+    {% if page.lang_es and page.language != 'es' %}
+      <li><a href="{{ page.lang_es | relative_url }}" class="btn btn--inverse">Español</a></li>
+    {% endif %}
+    
+    {% if page.lang_en and page.language != 'en' %}
+      <li><a href="{{ page.lang_en | relative_url }}" class="btn btn--inverse">English</a></li>
+    {% endif %}
+    
+    {% if page.lang_ja and page.language != 'jp' %}
+      <li><a href="{{ page.lang_ja | relative_url }}" class="btn btn--inverse">日本語</a></li>
+    {% endif %}
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+# main links
+main:
+  - title: "Tags"
+    url: /tags/
+  - title: "Projects"
+    url: /categories/#projects
+  - title: "Categories"
+    url: /categories/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/

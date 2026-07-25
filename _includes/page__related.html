@@ -1,0 +1,19 @@
+{% assign locale = include.locale | default: site.locale %}
+
+{% assign posts_idioma = site.posts | where: "language", page.language %}
+{% assign posts = posts_idioma | where_exp: "post", "post.hidden != true" %}
+
+<div class="page__related">
+  {% include before-related.html %}
+  <h2 class="page__related-title">{{ site.data.ui-text[locale].related_label | default: "You May Also Enjoy" }}</h2>
+  <div class="grid__wrapper">
+    {% assign count = 0 %}
+    {% for post in posts %}
+      {% if post.id == page.id %}{% continue %}{% endif %}
+      
+      {% include archive-single.html locale=locale type="grid" %}
+      {% assign count = count | plus: 1 %}
+      {% if count == 4 %}{% break %}{% endif %}
+    {% endfor %}
+  </div>
+</div>
