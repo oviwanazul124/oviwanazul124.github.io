@@ -15,9 +15,9 @@ use_math: true
 
 language: es
 ref: japanese-learning-website
-#lang_en: /en/japanese-learning-website
+lang_en: /en/japanese-learning-website
 lang_es: /es/japanese-learning-website
-#lang_ja: /jp/japanese-learning-website
+lang_ja: /jp/japanese-learning-website
 permalink: /es/japanese-learning-website
 
 header:
